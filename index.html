@@ -4,10 +4,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,inital-scale=1.0">
-        <link rel="stylesheet" href="/xiaozhan/CSS/home.css">
+        <link rel="stylesheet" href="/xiaozhan/CSS/home.css">   <!--/xiaozhan-->
         <title>小站</title>
     </head>   
     <body>
         <h1>HI,这是我的个人小站,小站每天都会更新!</h1>
+        <h4 id="biaoti">欢迎来到小站！！！</h4>
+
+
+        <script>
+            var cebiao = ["真的有人会看这里吗？","欢迎来到小站！！！","今天又是活力满满的一天啊！","你好，欢迎来看我的小站！"]
+            var h4 = document.getElementById("biaoti")
+            function randow_a_num(min,max){
+                return Math.floor(Math.random() * (max-min+1)) + 1;
+            }
+
+            function get(){
+                var xianshi = cebiao[randow_a_num(0,4)]
+                h4.textContent = xianshi
+                console.log(xianshi)
+            }
+
+            function hi(){
+                setTimeout(() => {
+                    get()
+                    console.log("10s")
+                },10000)
+                hi()
+            }
+
+            hi()
+        </script> 
     </body>
 </html>
