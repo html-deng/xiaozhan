@@ -5,7 +5,7 @@ body{
     width: 100%;
 }
 
-h1,h4{
+h1{
     text-align: center;
     text-shadow: 3px;
 
@@ -13,4 +13,16 @@ h1,h4{
     border: 10px solid rgba(220, 60, 0, 0.7);
     border-radius: 10px;
     background-color: rgba(255, 68, 0, 0.4);
+}
+
+h4{
+    text-align: center;
+    text-shadow: 3px;
+
+    margin-right: 500%;
+    border: 10px solid rgba(220, 60, 0, 0.7);
+    border-radius: 10px;
+    background-color: rgba(255, 68, 0, 0.4);
+
+    width: 250px;
 }

@@ -3,8 +3,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,inital-scale=1.0">
-        <link rel="stylesheet" href="/xiaozhan/CSS/home.css">   <!--/xiaozhan-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="/CSS/home.css">   <!--/xiaozhan-->
         <title>小站</title>
     </head>   
     <body>
@@ -13,24 +13,22 @@
 
 
         <script>
-            var cebiao = ["真的有人会看这里吗？","欢迎来到小站！！！","今天又是活力满满的一天啊！","你好，欢迎来看我的小站！"]
-            var h4 = document.getElementById("biaoti")
+            var biaoti = document.getElementById("biaoti")
+            var cebiao = ["真的有人会看这里吗？", "欢迎来到小站！！！", "今天又是活力满满的一天啊！", "你好，欢迎来看我的小站！！"];
             function randow_a_num(min,max){
-                return Math.floor(Math.random() * (max-min+1)) + 1;
+                return Math.floor(Math.random() * (max - min + 1)) + min;
             }
 
             function get(){
-                var xianshi = cebiao[randow_a_num(0,4)]
-                h4.textContent = xianshi
-                console.log(xianshi)
+                var xianshi = cebiao[randow_a_num(0,3)]
+                biaoti.textContent = xianshi
             }
 
             function hi(){
                 setTimeout(() => {
                     get()
-                    console.log("10s")
-                },10000)
-                hi()
+                    hi()
+                },5000)   
             }
 
             hi()
