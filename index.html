@@ -4,34 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="/xiaozhan/CSS/home.css">   <!--/xiaozhan-->
+        <link rel="stylesheet" href="/CSS/home.css">   <!--/xiaozhan-->
         <title>小站</title>
     </head>   
     <body>
         <h1>HI,这是我的个人小站,小站每天都会更新!</h1>
-        <h4 id="biaoti">欢迎来到小站！！！</h4>
+        <h4 id="title">欢迎来到小站！！！</h4>
 
 
         <script>
-            var biaoti = document.getElementById("biaoti")
-            var cebiao = ["真的有人会看这里吗？", "欢迎来到小站！！！", "今天又是活力满满的一天啊！", "你好，欢迎来看我的小站！！"];
-            function randow_a_num(min,max){
+            var title = document.getElementById("title")
+            var vocabulary = ["真的有人会看这里吗？", "欢迎来到小站！！！", "今天又是活力满满的一天啊！", "你好，欢迎来看我的小站！！!","今天天气真好,你想出去运动吗?"];
+            function randow_number(min,max){
                 return Math.floor(Math.random() * (max - min + 1)) + min;
             }
 
-            function get(){
-                var xianshi = cebiao[randow_a_num(0,3)]
-                biaoti.textContent = xianshi
+            function obtain(){
+                var display = vocabulary[randow_number(0,4)]
+                title.textContent = display
             }
 
-            function hi(){
+            function title_display(){
                 setTimeout(() => {
-                    get()
-                    hi()
+                    obtain()
+                    title_display()
                 },5000)   
             }
 
-            hi()
+            title_display()
         </script> 
     </body>
 </html>
