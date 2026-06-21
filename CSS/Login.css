@@ -1,0 +1,15 @@
+body{
+    background-image: url('../image/background.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+
+    margin-right: 10px;
+    border: 10px solid rgba(220, 60, 0, 0.7);
+    border-radius: 10px;
+    background-color: rgba(255, 68, 0, 0.4);
+}
