@@ -10,11 +10,55 @@
 <body>
     <h1>管理员登陆界面</h1>
 
-    <form accept="login()">
-        <h2>用户名：</h2><input type="text" placeholder="请输入用户名" width="100%">
-        <h2>密码：</h2><input type="password" placeholder="请输入密码" width="100%">
+    <form id="login">
+        <h2>用户名：</h2><input type="text" placeholder="请输入用户名" width="100%" id="name">
+        <h2>密码：</h2><input type="password" placeholder="请输入密码" width="100%" id="password">
+        <h2>手机号：</h2><input type="text" placeholder="请输入手机号" width="100%" id="phone_number">
 
         <input type="submit" value="提交" width="100px" height="50px">
     </form>
+
+    <script>
+
+        document.getElementById("login").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var the_name = document.getElementById("name");
+            var the_password = document.getElementById("password");
+            var the_phone_number = document.getElementById("phone_number");
+
+            if(the_name == ""){
+                alert("请输入用户名！");
+                return;
+            }
+
+            if(the_password == ""){
+                alert("请输入密码！");
+                return false;
+            }
+
+            if(the_phone_number == ""){
+                alert("请输入手机号！");
+                return false;
+            }
+
+            if(the_name != "html-deng"){
+                alert("用户名错误！");
+                return false;
+            }
+
+            if(the_password != "150131"){
+                alert("密码错误！");
+                return false;
+            }
+
+            if(the_phone_number != "13719123735"){
+                alert("手机号错误！");
+                return false;
+            }
+
+            alert("表单验证成功！")
+        });
+    </script>
 </body>
 </html>
